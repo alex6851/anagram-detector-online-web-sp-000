@@ -8,13 +8,14 @@ class Anagram
 
   def match(array)
 
-    new_array = []
-
-    array.each do |each_word|
-      if each_word.split("").sort == word.split("").sort
-        new_array << each_word
-      end
-    end
-      new_array
+    # new_array = []
+    # 
+    # array.each do |each_word|
+    #   if each_word.split("").sort == word.split("").sort
+    #     new_array << each_word
+    #   end
+    # end
+    #   new_array
+    array.select {|x| x.split("").sort == word.split("").sort}
   end
 end
